@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+.register-bg{
+    background: url("assets/images/quiz-login.jpg") !important;
+    background-size: cover !important;
+}
+.login-bg{
+    background: url("assets/images/quiz-login.jpg") !important;
+    background-size: cover !important;
+}
+.card-numbers{
+    font-size: 3.2rem;
+}
+.btn-1d {
+    background: #245e97 !important;
+    color: #fff !important;
+    border: none;
+}
+
+.mb15{
+    margin-bottom: 1.5rem;
+}
+.mr5{
+    margin-right: 0.5rem;
+}
+.mt-10{
+    margin-top: 1rem;
+}
+.mt5{
+    margin-top: 0.5rem;
+}
+
+.modal-position {
+  top: 30%;
+  width: 500px;
+  height: 501px;
+
+}

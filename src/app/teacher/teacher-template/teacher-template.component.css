@@ -1,0 +1,15 @@
+mat-sidenav{
+  background: white;
+  position: fixed;
+}
+mat-sidenav-content{
+  overflow: hidden;
+}
+.main{
+padding-top: 3%;
+}
+
+mat-sidenav-container{
+  min-height: 97%;
+  overflow: hidden;
+}

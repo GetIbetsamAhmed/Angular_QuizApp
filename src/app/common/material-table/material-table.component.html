@@ -1,0 +1,51 @@
+<div class="mat-elevation-z8">
+  <!--<div class="row">
+    <div class="col-xs-10 col-10 col-md-10 form-group">
+
+    </div>
+    <div class="col-xs-2 col-2 col-md-2 form-group">
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+      </mat-form-field>
+    </div>
+</div>-->
+<div class="card">
+  <table mat-table [dataSource]="dataSourceOne" class="mat-elevation-z0" style="width: 100%;" matSort #empTbSort="matSort">
+    <!-- ID Column -->
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.key">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>{{ column.name }}</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element[column.key]}}</mat-cell>
+    </ng-container>
+    <!-- <ng-container matColumnDef="content">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>{{title}}</mat-header-cell>
+      <mat-cell *matCellDef="let row" >{{row.content}}</mat-cell>
+    </ng-container> -->
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Actions</mat-header-cell>
+      <!-- <mat-cell *matCellDef="let row"> {{row.name}}</mat-cell> -->
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="accent" (click)="editItem(row,i)" >
+          <span class="mr5" ><i class="feather icon-edit"></i></span>
+        </button>
+        <button mat-icon-button color="accent" (click)="deleteItem(row,i)">
+            <span class="mr5" ><i class="feather icon-trash-2"></i></span>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumnsOne"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumnsOne;"></mat-row>
+
+
+  </table>
+
+  <mat-paginator [length]="100"
+  [pageSize]="5"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  aria-label="Select page">
+</mat-paginator>
+</div>
+</div>

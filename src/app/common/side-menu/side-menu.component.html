@@ -1,0 +1,109 @@
+ <!-- Side Nav START -->
+ <div class="nav-logo" *ngIf="isExpanded">
+  <div class="w-100 logo">
+      <img class="img-fluid" src="../../../assets/images/1decision-logo.jpg" alt="logo">
+  </div>
+</div>
+<ul class="nav-menu" *ngIf="hasRoute('admin')">
+  <li class="nav-menu-item">
+      <a [routerLink]="['/admin']">
+          <i class="feather icon-home"></i>
+          <span class="nav-menu-item-title" *ngIf="isExpanded">Dashboard</span>
+      </a>
+  </li>
+  <li class="nav-menu-item">
+      <a [routerLink]="['personaldevelopment']">
+          <i class="feather icon-book-open"></i>
+          <span class="nav-menu-item-title" *ngIf="isExpanded">Personal Development Areas</span>
+      </a>
+  </li>
+  <li class="nav-menu-item">
+      <a [routerLink]="['teachersList']">
+          <i class="feather icon-users"></i>
+          <span class="nav-menu-item-title" *ngIf="isExpanded">Teachers</span>
+      </a>
+  </li>
+  <li class="nav-menu-item">
+    <a [routerLink]="['schoolsList']">
+        <i class="feather icon-home"></i>
+        <span class="nav-menu-item-title" *ngIf="isExpanded">Schools</span>
+    </a>
+</li>
+<li class="nav-menu-item">
+    <a [routerLink]="['questions']">
+        <i class="feather icon-info"></i>
+        <span class="nav-menu-item-title" *ngIf="isExpanded">Knowledge Quiz</span>
+    </a>
+</li>
+  <!-- <li class="nav-submenu">
+    <a class="nav-submenu-title">
+        <i class="feather icon-box"></i>
+        <span *ngIf="isExpanded">Reports</span>
+        <i class="nav-submenu-arrow" *ngIf="isExpanded"></i>
+    </a>
+    <ul class="nav-menu menu-collapse">
+        <li class="nav-menu-item">
+            <a href="#" *ngIf="isExpanded">Avatar</a>
+        </li>
+
+    </ul>
+</li> -->
+</ul>
+<ul class="nav-menu" *ngIf="hasRoute('teacher')">
+  <li class="nav-menu-item">
+      <a [routerLink]="['/teacher']">
+          <i class="feather icon-home"></i>
+          <span class="nav-menu-item-title"*ngIf="isExpanded">Dashboard</span>
+      </a>
+  </li>
+
+  <li class="nav-menu-item">
+      <a [routerLink]="['']">
+          <i class="feather icon-users"></i>
+          <span class="nav-menu-item-title" *ngIf="isExpanded">Students</span>
+      </a>
+  </li>
+  <li class="nav-menu-item">
+      <a href="#">
+          <i class="feather icon-edit"></i>
+          <span class="nav-menu-item-title" *ngIf="isExpanded">Tests</span>
+      </a>
+  </li>
+
+  <!-- <li class="nav-submenu">
+      <a class="nav-submenu-title">
+          <i class="feather icon-box"></i>
+          <ng-container *ngIf="isExpanded">
+            <span>Reports</span>
+            <i class="nav-submenu-arrow"></i>
+          </ng-container>
+      </a>
+      <ul class="nav-menu menu-collapse" *ngIf="isExpanded">
+          <li class="nav-menu-item">
+              <a href="v-avatar.html">Avatar</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-alert.html">Alert</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-badge.html">Badge</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-buttons.html">Buttons</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-cards.html">Cards</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-icons.html">Icons</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-lists.html">Lists</a>
+          </li>
+          <li class="nav-menu-item">
+              <a href="v-typography.html">Typography</a>
+          </li>
+      </ul>
+  </li> -->
+</ul>
+<!-- Side Nav END -->
